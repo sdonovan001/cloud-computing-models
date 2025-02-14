@@ -11,6 +11,7 @@ The image above illustrates the different application stack responsibilities for
 * [Installing HashiCorp Terraform](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
 
 For more details on each hosting model see the README in their respective directories in the repo.
+* [IaaS](/IaaS/README.md)
 
 ## Stock Charting Application
 The charting application is a simple python based REST application that graphs the last six months of a companies stock price. It throws in a couple of moving averages and technical indicators as well.  It returns the graph in Scalable Vector Graphics (svg) format which can easily be displayed by all major web browsers.
