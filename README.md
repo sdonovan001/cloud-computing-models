@@ -25,5 +25,8 @@ The charting application is a simple python based REST application that graphs t
 | GET    | ip_addr/status               | {"status": "OK"}      | 
 | GET    | ip_addr/chart/[stock-symbol] | <svg ...> ... <\/svg> |
 
+### Screen Shot
 
-<img src="images/goog-iaas.png" alt="Oh Nooo!" style="border: 2px solid grey;">
+<kbd>
+<img src="images/goog-iaas.png" alt="Oh Nooo!" style="border: 2px solid red;">
+</kbd>
