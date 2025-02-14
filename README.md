@@ -1,5 +1,5 @@
 # Public Cloud Hosting Models 
----
+
 ## Overview
 The contents of this repo explain the differences between the most common cloud hosting models.  Before you can embark down a cloud computing journey, it is important that you understand the different cloud hosting models.  The three main models are __Infrastructure-as-a-Service (IaaS)__, __Platform-as-a-Service (PaaS)__ and __Software-as-a-Service (SaaS)__.
 
@@ -19,10 +19,11 @@ For more details on each hosting model see the README in their respective direct
 ## Stock Charting Application
 The charting application is a simple python based REST application that graphs the last six months of a companies stock price. It throws in a couple of moving averages and technical indicators as well.  It returns the graph in Scalable Vector Graphics (svg) format which can easily be displayed by all major web browsers.
 
-| Method | URL                          | Returns              |
----------|------------------------------|----------------------|
-| GET    | ip_addr/status               | {"status": "OK"}     | 
+### Endpoints
+| Method | URL                          | Returns               |
+---------|------------------------------|-----------------------|
+| GET    | ip_addr/status               | {"status": "OK"}      | 
 | GET    | ip_addr/chart/[stock-symbol] | <svg ...> ... <\/svg> |
 
----
-![Oh Noooo!](/images/goog-iaas.png "Six month chart for GOOG")
+
+<img src="images/goog-iaas.png" alt="Oh Nooo!" style="border: 2px solid grey;">
