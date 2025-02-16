@@ -13,7 +13,7 @@
 * To store the Google Cloud Build packer community builder in Artifact Registry, grant the [Artifact Registry Writer role (roles/artifactregistry.writer)](https://cloud.google.com/artifact-registry/docs/access-control#grant) to your build service account.
 
 ## Download and Build the Packer Builder Image
-Cloud Build provides a community builder docker image that can be used to invode packer commands via Cloud Build. Before you can use it, you must build it and push it to the Artifact Registry in your GCP project.
+Cloud Build provides a community builder docker image that can be used to invoke packer commands via Cloud Build. Before you can use it, you must build it and push it to the Artifact Registry in your GCP project.
 
 * Clone the [cloud-builders-community](https://github.com/GoogleCloudPlatform/cloud-builders-community) repository.
   ```
