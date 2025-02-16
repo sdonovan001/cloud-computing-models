@@ -26,6 +26,7 @@ Cloud Build provides a community builder docker image that can be used to invoke
   ```
   
 ## Configuring Cloud Build to run your Packer Builder Image
+You must now create a Service Account for your Packer builds to run as.  Google Cloud Build will impersonate this account when running your builds.
 * Export GCP project variables.  Replace *my-project-id* below with your GCP project identifier.
   ```
   export PROJECT_ID=my-project-id
@@ -40,15 +41,26 @@ Cloud Build provides a community builder docker image that can be used to invoke
   gcloud projects add-iam-policy-binding $PROJECT_ID \
   --role="roles/compute.instanceAdmin.v1" \
   --member="serviceAccount:packer@${PROJECT_ID}.iam.gserviceaccount.com"
+
   gcloud projects add-iam-policy-binding $PROJECT_ID \
   --role="roles/iam.serviceAccountUser" \
   --member="serviceAccount:packer@${PROJECT_ID}.iam.gserviceaccount.com"
   ```
+* Grant permissions for Cloud Build to impersonate the Packer Service Account:
+  ```
+  gcloud iam service-accounts add-iam-policy-binding \
+  packer@${PROJECT_ID}.iam.gserviceaccount.com \
+  --role="roles/iam.serviceAccountTokenCreator" \
+  --member="serviceAccount:${PROJECT_NUMBER}@cloudbuild.gserviceaccount.com"
+  ```
 
+## Submit your Packer Image Build
 
-## Submit your Build
-
-Create step by step doc from
-https://cloud.google.com/build/docs/building/build-vm-images-with-packer
-https://github.com/GoogleCloudPlatform/cloud-builders-community/tree/master/packer
-https://github.com/GoogleCloudPlatform/cloud-builders-community/tree/master/packer/examples/gce
+* Edit the *variables.pkvars.hcl* in this directory and set the following variables appropriately:
+  * `project_id` - your project identifier
+  * `zone` - GCP Compute Engine zone for temporary instance
+  * `builder_sa` - Packer Service Account in the format packer@{PROJECT_ID}.iam.gserviceaccount.com
+* Submit your packer image build to Google Cloud Build:
+  ```
+  gcloud builds submit --config=cloudbuild.yaml .
+  ```
