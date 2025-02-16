@@ -55,7 +55,7 @@ You must now create a Service Account for your Packer builds to run as.  Google 
   ```
 
 ## Submit your Packer Image Build
-
+Everything up to this point was just preparing your environment for this step.  This is where the real *work* occurs.  When you submit your packer image build, gcloud will tar up all of the appropriate config files, scripts and application sources as directed by the contents of your cloudbuild.yaml and send them to Cloud Build.  The Packer Builder Docker image will execute your packer commands.  This will result in a temporary GCE instance being stood up in your GCP project running whatever OS source image you specified in your build.pkr.hcl file.  The contents designated by your file provisioner will be extracted to the instance and the commands designated in the shell provisioner will be run.  When they finish running the instance will be shut down, a new OS image will be created from the boot disk and the boot disk will be deleted.
 * Edit the *variables.pkvars.hcl* in this directory and set the following variables appropriately:
   * `project_id` - your project identifier
   * `zone` - GCP Compute Engine zone for temporary instance
