@@ -9,4 +9,4 @@ While IaaS does come with the benefit of shifting CapEx costs to OpEx costs (you
 
 A huge benefit of IaaS is the speed at which you can implement chage across your organization. Lets say you recognize an opportunity to leapfrog your competition by significantly scaling the deployment of one of you applications globaly.  In the On-site / On-prem model it might take you months to get the required hardware ordered and deployed.  With an IaaS cloud hosting solution... it will only take minutes!
 ## Example Deployment using Google Cloud Build, Packer and Terraform
-bla bla bla
+When deploying IaaS application, you are responsible for building OS images, standing up and configuring servers, identifying and managing your storage needs and properly configuring your network resources.  Since we want this to be easily repeatable, we will automate these steps by leveraging Google Cloud Build, Packer and Terraform.
