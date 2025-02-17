@@ -1,6 +1,6 @@
 # Public Cloud Hosting Models 
 
-## Overview
+### Overview
 This repo explains the differences between the three most common cloud hosting models and it provides an example application deployment for each of the three models using [Google Cloud Platform](https://cloud.google.com/?hl=en).  Before you embark down a cloud computing journey, it is important that you understand the different characteristics of the most common cloud hosting models.  The three main models are __Infrastructure-as-a-Service (IaaS)__, __Platform-as-a-Service (PaaS)__ and __Software-as-a-Service (SaaS)__.
 
 <img src="/images/models1.png" alt="On Nooo!" witdh="550" height="550">
