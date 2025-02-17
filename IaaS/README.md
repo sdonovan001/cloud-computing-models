@@ -10,19 +10,3 @@ While IaaS does come with the benefit of shifting CapEx costs to OpEx costs (you
 A huge benefit of IaaS is the speed at which you can implement chage across your organization. Lets say you recognize an opportunity to leapfrog your competition by significantly scaling the deployment of one of you applications.  In the On-site / On-prem model it might take you months to get the required hardware ordered and deployed.  With an IaaS solution... it will only take minutes!
 ## Example Deployment using Google Cloud Build, Packer and Terraform
 bla bla bla
-
-### Building the OS Image
-<img src="../images/packer-build.png" alt="On Nooo!" witdh="550" height="550">
-
-1. You start your build by executing `gcloud builds submit --config=cloudbuild.yaml`.
-2. Gcloud packages up the build artifacts specified in your `cloudbuild.yaml`.
-3. Gcloud sends your build artifacts to the Google Cloud Build service.
-4. Cloud Build runs the build steps defined in your `cloudbuild.yaml` using the appropriate Docker container.
-5. A temporary GCE VM is stood up using the source OS specified in your `build.pkr.hcl` file.
-6. The provisioners defined in your `build.pkr.hcl` file are run mutating the OS (installing / configuring your application).
-7. The temporary GCE VM is shut down taking special care to __not__ delete the boot disk.
-8. A new GCE OS Image is created from the boot disk and the boot disk is deleted.
-
-
-## Deploying the Image
-Add diagram and description
