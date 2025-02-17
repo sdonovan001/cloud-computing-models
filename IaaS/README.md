@@ -15,5 +15,5 @@ When deploying IaaS application, you are responsible for building OS images, sta
 * HashiCorp Terraform is an open-source tool that lets yoou build, change and manage infrastructure as Code (IaC).
 
 We will break our deployment into two distinct steps: 
-* We will use Cloud Build and Packer to package our stock charting application into a runnable OS image.  Step by step instructions along with the necessary artifacts can be found in the [packer](/packer) directory.
+* We will use Cloud Build and Packer to package our stock charting application into a runnable OS image.  Step by step instructions along with the necessary artifacts can be found in the [packer](./packer) directory.
 * We will use Terraform to stand up a GCE VM running our new OS image (i.e. deploy our application).  Step by step instructions along with the necessary artifacts can be found in the terraform directory.
