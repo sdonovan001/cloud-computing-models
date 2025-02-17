@@ -1,5 +1,5 @@
 # Building GCE Images with Packer and Cloud Build
-## Prerequesites
+### Prerequesites
 
 * Install [Google Cloud CLI](https://cloud.google.com/sdk?hl=en).
 * Use gcloud to enable the following APIs:
@@ -12,7 +12,7 @@
 * To use Packer with Cloud Build, grant the [Compute Engine Instance Admin role (roles/compute.instanceAdmin.v1)](https://cloud.google.com/artifact-registry/docs/access-control#grant) to your build service account.
 * To store the Google Cloud Build packer community builder in Artifact Registry, grant the [Artifact Registry Writer role (roles/artifactregistry.writer)](https://cloud.google.com/artifact-registry/docs/access-control#grant) to your build service account.
 
-## Download and Build the Packer Builder Image
+### Download and Build the Packer Builder Image
 Cloud Build provides a community builder docker image that can be used to invoke packer commands via Cloud Build. Before you can use it, you must build it and push it to the Artifact Registry in your GCP project.
 
 * Clone the [cloud-builders-community](https://github.com/GoogleCloudPlatform/cloud-builders-community) repository.
@@ -25,7 +25,7 @@ Cloud Build provides a community builder docker image that can be used to invoke
   gcloud builds submit .
   ```
   
-## Configuring Cloud Build to run your Packer Builder Image
+### Configuring Cloud Build to run your Packer Builder Image
 You must now create a Service Account for your Packer builds to run as.  Google Cloud Build will impersonate this account when running your builds.
 * Export GCP project variables.  Replace *my-project-id* below with your GCP project identifier.
   ```
@@ -54,8 +54,6 @@ You must now create a Service Account for your Packer builds to run as.  Google 
   --member="serviceAccount:${PROJECT_NUMBER}@cloudbuild.gserviceaccount.com"
   ```
 
-## Submit your Packer Image Build
-Everything up to this point was just preparing your environment for this step.  This is where the real *work* occurs.  When you submit your packer image build, gcloud will tar up all of the appropriate config files, scripts and application sources as directed by the contents of your cloudbuild.yaml and send them to Cloud Build.  The Packer Builder Docker image will execute your packer commands.  This will result in a temporary GCE instance being stood up in your GCP project running whatever OS source image you specified in your build.pkr.hcl file.  The contents designated by your file provisioner will be extracted to the instance and the commands designated in the shell provisioner will be run.  When they finish running the instance will be shut down, a new OS image will be created from the boot disk and the boot disk will be deleted.
 * Edit the *variables.pkvars.hcl* in this directory and set the following variables appropriately:
   * `project_id` - your project identifier
   * `zone` - GCP Compute Engine zone for temporary instance
@@ -64,3 +62,15 @@ Everything up to this point was just preparing your environment for this step.  
   ```
   gcloud builds submit --config=cloudbuild.yaml .
   ```
+### Build Details  
+<img src="../../images/packer-build.png" alt="On Nooo!" witdh="550" height="550">
+
+1. Your build starts when you execute `gcloud builds submit --config=cloudbuild.yaml`.
+2. Gcloud packages up the build artifacts specified in your `cloudbuild.yaml`.
+3. Gcloud sends your build artifacts to the Google Cloud Build service.
+4. Cloud Build runs the build steps defined in your `cloudbuild.yaml` using the appropriate Docker container.
+5. A temporary GCE VM is stood up using the source OS specified in your `build.pkr.hcl` file.
+6. The provisioners defined in your `build.pkr.hcl` file are run mutating the OS (installing / configuring your application).
+7. The temporary GCE VM is shut down taking special care to __not__ delete the boot disk.
+8. A new GCE OS Image is created from the boot disk and the boot disk is deleted.
+
