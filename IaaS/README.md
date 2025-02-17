@@ -8,9 +8,12 @@ With IaaS you are responsible for everything above the virtualization layer.  Th
 While IaaS does come with the benefit of shifting CapEx costs to OpEx costs (you don't *own* the physical assets... you *rent* them), you still have many of the same costs you would have with an On-site / On-prem model. With IaaS your datacenter staffing / management costs will be somewhat reduced but your people are still responsible for much of the application stack and therfore the *costs* associated with that.  
 
 A huge benefit of IaaS is the speed at which you can implement chage across your organization. Lets say you recognize an opportunity to leapfrog your competition by significantly scaling the deployment of one of you applications.  In the On-site / On-prem model it might take you months to get the required hardware ordered and deployed.  With an IaaS solution... it will only take minutes!
-## Packer
-Add diagram and description
+## Example Deployment using Google Cloud Build, Packer and Terraform
+bla bla bla
+
+### Building the OS Image
 <img src="../images/packer-build.png" alt="On Nooo!" witdh="550" height="550">
+
 1. You start your build by executing `gcloud builds submit --config=cloudbuild.yaml`.
 2. Gcloud packages up the build artifacts specified in your `cloudbuild.yaml`.
 3. Gcloud sends your build artifacts to the Google Cloud Build service.
@@ -21,5 +24,5 @@ Add diagram and description
 8. A new GCE OS Image is created from the boot disk and the boot disk is deleted.
 
 
-## Terraform
+## Deploying the Image
 Add diagram and description
