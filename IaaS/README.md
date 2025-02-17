@@ -7,6 +7,6 @@ With IaaS you are responsible for everything above the virtualization layer.  Th
 
 While IaaS does come with the benefit of shifting CapEx costs to OpEx costs (you don't *own* the physical assets... you *rent* them), you still have many of the same costs you would have with an On-site / On-prem model. With IaaS your datacenter staffing / management costs will be somewhat reduced but your people are still responsible for much of the application stack and therfore the *costs* associated with that.  
 
-A huge benefit of IaaS is the speed at which you can implement chage across your organization. Lets say you recognize an opportunity to leapfrog your competition by significantly scaling the deployment of one of you applications globaly.  In the On-site / On-prem model it might take you months to get the required hardware ordered and deployed.  With an IaaS solution... it will only take minutes!
+A huge benefit of IaaS is the speed at which you can implement chage across your organization. Lets say you recognize an opportunity to leapfrog your competition by significantly scaling the deployment of one of you applications globaly.  In the On-site / On-prem model it might take you months to get the required hardware ordered and deployed.  With an IaaS cloud hosting solution... it will only take minutes!
 ## Example Deployment using Google Cloud Build, Packer and Terraform
 bla bla bla
