@@ -11,7 +11,7 @@ The image above illustrates the different application stack responsibilities for
 * [Software-as-a-Service (SaaS)](/SaaS/README.md)
 
 ## Stock Charting Application
-The charting application is a simple python based REST application that graphs the last six months of a companies stock price. It throws in a couple of moving averages and technical indicators as well.  It returns the graph in Scalable Vector Graphics (svg) format which can easily be displayed by all major web browsers.
+For each cloud hosting model, we provide an example deployment of a simple charting application. The application is a simple python based REST application that graphs the last six months of a companies stock price. It throws in a couple of moving averages and technical indicators as well.  It returns the graph in Scalable Vector Graphics (svg) format which can easily be displayed by all major web browsers.
 
 ### Endpoints
 | Method | URL                          | Returns               |
