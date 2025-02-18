@@ -64,6 +64,7 @@ You must now create a Service Account for your Packer builds to run as.  Google 
   ```
   gcloud builds submit --config=cloudbuild.yaml .
   ```
+---
 ### Cloud Build Details (What's Happening Behind the Curtain)
 <img src="../../images/packer-build.png" alt="On Nooo!" witdh="550" height="550">
 
