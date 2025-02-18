@@ -58,6 +58,8 @@ You must now create a Service Account for your Packer builds to run as.  Google 
   * `project_id` - your project identifier
   * `zone` - GCP Compute Engine zone for temporary instance
   * `builder_sa` - Packer Service Account in the format packer@{PROJECT_ID}.iam.gserviceaccount.com
+ 
+### Submit Build
 * Submit your packer image build to Google Cloud Build:
   ```
   gcloud builds submit --config=cloudbuild.yaml .
