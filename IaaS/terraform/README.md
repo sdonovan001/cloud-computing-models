@@ -13,9 +13,11 @@
 ### Deploy Application
 
 ### Test Deployment
-* Get public IP address for the stock symbol charting application you just deployed:
-  ```terraform show | grep nat_ip | awk '{print $3 }'```
-
+* Get the __public-ip-address__ for the stock symbol charting application you just deployed:
+  ```
+  terraform show | grep nat_ip | awk '{print $3 }'
+  ```
+* Enter `http://[public-ip-address]/chart/goog` in your browser of choice and the application you just deployed will chart the last six months of Google's stock price. 
 ### Delete Deployment
 
 ---
