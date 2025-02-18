@@ -13,6 +13,8 @@
 ### Deploy Application
 
 ### Test Deployment
+* Get public IP address for the stock symbol charting application you just deployed:
+  ```terraform show | grep nat_ip | awk '{print $3 }'```
 
 ### Delete Deployment
 
