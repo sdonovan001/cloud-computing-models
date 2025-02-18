@@ -10,3 +10,5 @@ https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
 
 ### Delete Deployment
 
+---
+### Terraform Details (What's Happening Behind the Curtain)
