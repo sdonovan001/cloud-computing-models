@@ -19,6 +19,38 @@ Terraform must persist state to manager your infrastructure.  It uses `backends`
   terraform init
   ```
 ### Deploy Application
+* You deploy your infratructure by running __terraform apply__:
+  ```
+  terraform apply
+  
+  Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
+  + create
+
+  Terraform will perform the following actions:
+
+  # google_compute_instance.default will be created
+  + resource "google_compute_instance" "default" {
+      + can_ip_forward       = false
+      + cpu_platform         = (known after apply)
+      + creation_timestamp   = (known after apply)
+      + current_status       = (known after apply)
+      + deletion_protection  = false
+  ...
+  ...
+      + reservation_affinity (known after apply)
+
+      + scheduling (known after apply)
+    }
+
+  Plan: 1 to add, 0 to change, 0 to destroy.
+
+  Do you want to perform these actions?
+    Terraform will perform the actions described above.
+    Only 'yes' will be accepted to approve.
+
+    Enter a value:
+  ```
+* Before making any changes to your cloud infrastructure, terraform provides you with details on exactly what it is about to do.  Validate that the actions terraform is about to perform on your behalf are what you intend, before answering 'yes' to the prompt.  In our case answering 'yes' to the prompt will result in a GCE VM running our custom OS image we created being stood up which is exactly what we want... so answer __yes__ to the prompt.
 
 ### Test Deployment
 * Get the __public-ip-address__ for the stock symbol charting application you just deployed:
