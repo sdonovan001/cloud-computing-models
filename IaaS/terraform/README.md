@@ -1,4 +1,4 @@
-# Deploying GCE VM with Terraform
+# Deploying GCP Infrastructure with Terraform
 ### Prerequsites
 * Install [Google Cloud CLI](https://cloud.google.com/sdk?hl=en).
 * Use gcloud to enable the following APIs:
