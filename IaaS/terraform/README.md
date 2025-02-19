@@ -53,20 +53,45 @@ We have defined the infrastructure we want terraform to deploy in `main.tf`.  Th
   ```
 * Before making any changes to your cloud infrastructure, terraform provides you with details on exactly what it is about to do.  Validate that the actions terraform is about to perform on your behalf are what you intend, before answering 'yes' to the prompt.  In our case answering 'yes' to the prompt will result in a GCE VM running our custom OS image we created being stood up which is exactly what we want... so answer __yes__ to the prompt.
 
-### Test Deployment
+### Test our Deployment
 * Get the __public-ip-address__ for the stock symbol charting application you just deployed:
   ```
   terraform show | grep nat_ip | awk '{print $3 }'
   ```
 * Enter `http://[public-ip-address]/chart/goog` in your browser of choice and the application you just deployed will chart the last six months of Google's stock price. 
 ### Delete Infrastructure
-Terraform can not only be used to deploy infrastructure but it can also be used to _undeploy_ or destroy infrastructure you have deployed.  Note:  It is important to destroy any infrastructure you deploy in tutorials so that you stop being billed for it :wink:. 
+Terraform can not only be used to deploy infrastructure but it can also be used to _undeploy_ or destroy infrastructure you have deployed.  __Note__:  It is important to destroy any infrastructure you deploy in tutorials so that you stop being billed for it :wink:. 
 
 * Run terraform destroy to delete the infrastructure that you have deployed.
   ```
   terraform destroy
-  
-  ```
 
+  Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
+    - destroy
+
+  Terraform will perform the following actions:
+
+    # google_compute_instance.default will be destroyed
+    - resource "google_compute_instance" "default" {
+        - can_ip_forward             = false -> null
+        - cpu_platform               = "Intel Broadwell" -> null
+    ...
+    ...
+    - shielded_instance_config {
+          - enable_integrity_monitoring = true -> null
+          - enable_secure_boot          = false -> null
+          - enable_vtpm                 = true -> null
+        }
+    }
+
+  Plan: 0 to add, 0 to change, 1 to destroy.
+
+  Do you really want to destroy all resources?
+    Terraform will destroy all your managed infrastructure, as shown above.
+    There is no undo. Only 'yes' will be accepted to confirm.
+
+    Enter a value:
+  ```
+* Verify the changes terraform is about to make on your behalf.  In this case it will destroy (or delete) the GCE VM that we stood up with the apply.  This is exactly what we expect so answer __yes__ to the prompt.
 ---
 ### Terraform Details (What's Happening Behind the Curtain)
