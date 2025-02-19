@@ -18,8 +18,9 @@ Terraform must persist state to manager your infrastructure.  It uses `backends`
   ```
   terraform init
   ```
-### Deploy Application
-* You deploy your infratructure by running __terraform apply__:
+### Deploy Infrastructure
+We have defined the infrastructure we want terraform to deploy in `main.tf`.  This file contains a minimal configuration for a GCE VM running the custom OS image that we created with packer.
+* You deploy your infratructure by running terraform apply:
   ```
   terraform apply
   
@@ -58,7 +59,14 @@ Terraform must persist state to manager your infrastructure.  It uses `backends`
   terraform show | grep nat_ip | awk '{print $3 }'
   ```
 * Enter `http://[public-ip-address]/chart/goog` in your browser of choice and the application you just deployed will chart the last six months of Google's stock price. 
-### Delete Deployment
+### Delete Infrastructure
+Terraform can not only be used to deploy infrastructure but it can also be used to _undeploy_ or destroy infrastructure you have deployed.  Note:  It is important to destroy any infrastructure you deploy in tutorials so that you stop being billed for it :wink:. 
+
+* Run terraform destroy to delete the infrastructure that you have deployed.
+  ```
+  terraform destroy
+  
+  ```
 
 ---
 ### Terraform Details (What's Happening Behind the Curtain)
