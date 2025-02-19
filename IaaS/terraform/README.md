@@ -6,8 +6,13 @@
   gcloud services enable compute.googleapis.com
   ```
 * Install [Terraform](https://developer.hashicorp.com/terraform/install#darwin).
+* Terraform must be able to authenticate to Google Cloud in order to use GCP APIs to manage your cloud infrastructure.  You can use the gcloud CLI to create [Application Default Credentials](https://cloud.google.com/docs/authentication/application-default-credentials) that can be used by terraform when it makes calls to GCP APIs.  
+  ```
+  gcloud auth application-default login
+  ```
   
 ### Initialize Terraform
+Terraform must persist state to manager your infrastructure.  It uses `backends` to persist state.  The default backend is a local backend which stores state on the local filesystem, locks that state using system APIs, and performs operations locally.  While using a local backend is not suitable for managing large scale production environments, it is perfectly fine for small scale demos.  We will rely on the default local backend for our example deployment.
 
 
 ### Deploy Application
