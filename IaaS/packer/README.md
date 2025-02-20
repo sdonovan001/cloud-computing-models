@@ -8,8 +8,23 @@
   gcloud services enable servicemanagement.googleapis.com
   gcloud services enable storage-api.googleapis.com
   ```
-* To use Packer with Cloud Build, grant the [Compute Engine Instance Admin role (roles/compute.instanceAdmin.v1)](https://cloud.google.com/artifact-registry/docs/access-control#grant) to your build service account.
-* To store the Google Cloud Build packer community builder in Artifact Registry, grant the [Artifact Registry Writer role (roles/artifactregistry.writer)](https://cloud.google.com/artifact-registry/docs/access-control#grant) to your build service account.
+* Export GCP project variables.  Replace *my-project-id* below with your GCP project identifier.
+  ```
+  export PROJECT_ID=my-project-id
+  export PROJECT_NUMBER=`gcloud projects list --filter="$PROJECT_ID" --format="value(PROJECT_NUMBER)"`
+  ```
+* To use Packer with Cloud Build, grant the Compute Engine Instance Admin role (roles/compute.instanceAdmin.v1) to your build service account.
+  ```
+  gcloud projects add-iam-policy-binding $PROJECT_ID \
+  --role="roles/compute.instanceAdmin.v1" \
+  --member="serviceAccount:${PROJECT_NUMBER}-compute@developer.gserviceaccount.com"
+  ```
+* To store the Google Cloud Build packer community builder in Artifact Registry, grant the Artifact Registry Writer role (roles/artifactregistry.writer) to your build service account.
+  ```
+  gcloud projects add-iam-policy-binding $PROJECT_ID \
+  --role="roles/artifactregistry.writer" \
+  --member="serviceAccount:${PROJECT_NUMBER}-compute@developer.gserviceaccount.com"
+  ```
 
 ### Download and Build the Packer Builder Image
 Cloud Build provides a community builder docker image that can be used to invoke packer commands via Cloud Build. Before we can use it, we must build it and push it to the Artifact Registry in your GCP project.
@@ -26,11 +41,6 @@ Cloud Build provides a community builder docker image that can be used to invoke
   
 ### Configuring Cloud Build to run your Packer Builder Image
 We must now create a Service Account for our Packer builds to run as.  Google Cloud Build will impersonate this account when running our builds.
-* Export GCP project variables.  Replace *my-project-id* below with your GCP project identifier.
-  ```
-  export PROJECT_ID=my-project-id
-  export PROJECT_NUMBER=`gcloud projects list --filter="$PROJECT_ID" --format="value(PROJECT_NUMBER)"`
-  ```
 * Create Service Account for our Packer builds to run as:
   ```
   gcloud iam service-accounts create packer --description "Packer image builder"
