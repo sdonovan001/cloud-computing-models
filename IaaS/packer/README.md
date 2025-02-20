@@ -13,7 +13,7 @@
 * To store the Google Cloud Build packer community builder in Artifact Registry, grant the [Artifact Registry Writer role (roles/artifactregistry.writer)](https://cloud.google.com/artifact-registry/docs/access-control#grant) to your build service account.
 
 ### Download and Build the Packer Builder Image
-Cloud Build provides a community builder docker image that can be used to invoke packer commands via Cloud Build. Before you can use it, you must build it and push it to the Artifact Registry in your GCP project.
+Cloud Build provides a community builder docker image that can be used to invoke packer commands via Cloud Build. Before we can use it, we must build it and push it to the Artifact Registry in your GCP project.
 
 * Clone the [cloud-builders-community](https://github.com/GoogleCloudPlatform/cloud-builders-community) repository.
   ```
@@ -26,13 +26,13 @@ Cloud Build provides a community builder docker image that can be used to invoke
   ```
   
 ### Configuring Cloud Build to run your Packer Builder Image
-You must now create a Service Account for your Packer builds to run as.  Google Cloud Build will impersonate this account when running your builds.
+We must now create a Service Account for our Packer builds to run as.  Google Cloud Build will impersonate this account when running our builds.
 * Export GCP project variables.  Replace *my-project-id* below with your GCP project identifier.
   ```
   export PROJECT_ID=my-project-id
   export PROJECT_NUMBER=`gcloud projects list --filter="$PROJECT_ID" --format="value(PROJECT_NUMBER)"
   ```
-* Create Service Account for your Packer builds to run as:
+* Create Service Account for our Packer builds to run as:
   ```
   gcloud iam service-accounts create packer --description "Packer image builder"
   ```
@@ -60,7 +60,7 @@ You must now create a Service Account for your Packer builds to run as.  Google 
   * `builder_sa` - Packer Service Account in the format packer@{PROJECT_ID}.iam.gserviceaccount.com
  
 ### Submit Cloud Build
-* Submit your packer image build to Google Cloud Build:
+* Submit our packer image build to Google Cloud Build:
   ```
   gcloud builds submit --config=cloudbuild.yaml .
   ```
