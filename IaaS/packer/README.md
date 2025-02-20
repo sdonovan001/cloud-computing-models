@@ -68,11 +68,11 @@ You must now create a Service Account for your Packer builds to run as.  Google 
 ### Cloud Build Details (What's Happening Behind the Curtain)
 <img src="../../images/packer-build.png" alt="On Nooo!" witdh="550" height="550">
 
-1. Your build starts when you execute `gcloud builds submit --config=cloudbuild.yaml`.
-2. Gcloud packages up the build artifacts specified in your `cloudbuild.yaml`.
-3. Gcloud sends your build artifacts to the Google Cloud Build service.
-4. Cloud Build runs the build steps defined in your `cloudbuild.yaml` using the appropriate Docker container.
-5. A temporary GCE VM is stood up using the source OS specified in your `build.pkr.hcl` file.
+1. Our build starts when we execute `gcloud builds submit --config=cloudbuild.yaml`.
+2. Gcloud packages up the build artifacts specified in our `cloudbuild.yaml`.
+3. Gcloud sends our build artifacts to the Google Cloud Build service.
+4. Cloud Build runs the build steps defined in our `cloudbuild.yaml` using the appropriate Docker container.
+5. A temporary GCE VM is stood up using the source OS specified in our `build.pkr.hcl` file.
 6. The provisioners defined in our `build.pkr.hcl` file are run, mutating the OS (installing / configuring our application).
 7. The temporary GCE VM is shut down taking special care to __not__ delete the boot disk.
 8. A new GCE OS Image is created from the boot disk and the boot disk is deleted.
