@@ -38,3 +38,4 @@ Our service requires authentication so we will use the [Cloud Run Proxy](https:/
   ```
   gcloud run services delete chart-app
   ```
+  * You will be prompted for a region to delete the service from. Make sure that you enter the same region you used in the Build / Deployment step.
