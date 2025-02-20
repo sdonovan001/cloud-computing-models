@@ -14,19 +14,28 @@
   export PROJECT_ID=my-project-id
   export PROJECT_NUMBER=`gcloud projects list --filter="$PROJECT_ID" --format="value(PROJECT_NUMBER)"`
   ```
-* To use Packer with Cloud Build, grant the Compute Engine Instance Admin role (roles/compute.instanceAdmin.v1) to your build service account.
+* Add the necessary IAM Roles to the default service account:
   ```
   gcloud projects add-iam-policy-binding $PROJECT_ID \
   --role="roles/compute.instanceAdmin.v1" \
   --member="serviceAccount:${PROJECT_NUMBER}-compute@developer.gserviceaccount.com"
   ```
-* To store the Google Cloud Build packer community builder in Artifact Registry, grant the Artifact Registry Writer role (roles/artifactregistry.writer) to your build service account.
   ```
   gcloud projects add-iam-policy-binding $PROJECT_ID \
-  --role="roles/artifactregistry.writer" \
+  --role="roles/artifactregistry.createOnPushWriter" \
   --member="serviceAccount:${PROJECT_NUMBER}-compute@developer.gserviceaccount.com"
   ```
-
+  ```
+  gcloud projects add-iam-policy-binding $PROJECT_ID \
+  --role="roles/logging.logWriter" \
+  --member="serviceAccount:${PROJECT_NUMBER}-compute@developer.gserviceaccount.com"
+  ```
+  ```
+  gcloud projects add-iam-policy-binding $PROJECT_ID \
+  --role="roles/storage.objectUser" \
+  --member="serviceAccount:${PROJECT_NUMBER}-compute@developer.gserviceaccount.com"
+  ```
+  
 ### Download and Build the Packer Builder Image
 Cloud Build provides a community builder docker image that can be used to invoke packer commands via Cloud Build. Before we can use it, we must build it and push it to the Artifact Registry in your GCP project.
 
