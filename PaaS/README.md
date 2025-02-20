@@ -7,6 +7,12 @@
 ## Example Cloud Run Deployment using Google Cloud SDK
 
 ### Prerequsites
+* Install [Google Cloud CLI](https://cloud.google.com/sdk?hl=en).
+* Use gcloud to enable the following APIs:
+  ```
+  gcloud services enable run.googleapis.com
+  gcloud services enable cloudbuild.googleapis.com
+  ```
 
 ### Build / Deploy Service
 * The Google Cloud SDK CLI (gcloud) enables us to build and deploy our application with a single command.
