@@ -4,7 +4,6 @@
 * Install [Google Cloud CLI](https://cloud.google.com/sdk?hl=en).
 * Use gcloud to enable the following APIs:
   ```
-  gcloud services enable sourcerepo.googleapis.com
   gcloud services enable compute.googleapis.com
   gcloud services enable servicemanagement.googleapis.com
   gcloud services enable storage-api.googleapis.com
