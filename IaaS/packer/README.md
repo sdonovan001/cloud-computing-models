@@ -29,7 +29,7 @@ We must now create a Service Account for our Packer builds to run as.  Google Cl
 * Export GCP project variables.  Replace *my-project-id* below with your GCP project identifier.
   ```
   export PROJECT_ID=my-project-id
-  export PROJECT_NUMBER=`gcloud projects list --filter="$PROJECT_ID" --format="value(PROJECT_NUMBER)"
+  export PROJECT_NUMBER=`gcloud projects list --filter="$PROJECT_ID" --format="value(PROJECT_NUMBER)"`
   ```
 * Create Service Account for our Packer builds to run as:
   ```
