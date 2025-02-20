@@ -7,6 +7,7 @@
   gcloud services enable compute.googleapis.com
   gcloud services enable servicemanagement.googleapis.com
   gcloud services enable storage-api.googleapis.com
+  gcloud services enable cloudbuild.googleapis.com
   ```
 * Export GCP project variables.  Replace *my-project-id* below with your GCP project identifier.
   ```
