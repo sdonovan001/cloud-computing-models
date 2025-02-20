@@ -5,4 +5,7 @@
 ## Overview
 
 ## Example Cloud Run Deployment using Google Cloud SDK
-## Prerequsites
+### Prerequsites
+### Build / Deploy Service
+### Test Service
+### Delete Service
