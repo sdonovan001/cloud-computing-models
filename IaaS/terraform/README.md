@@ -11,13 +11,15 @@
   gcloud auth application-default login
   ```
   
-### Initialize Terraform
+### Terraform State
 Terraform must persist state to manager your infrastructure.  It uses `backends` to persist state.  The default backend is a local backend which stores state on the local filesystem, locks that state using system APIs, and performs operations locally.  While using a local backend is not suitable for managing large scale production environments, it is perfectly fine for small scale demos.  We will rely on the default local backend for our example deployment.
 
-* When you initialize terraform it will download the appropriate terraform provider required to interact with your cloud provider, create a local state file to store state in and create a lock file to track the specific provider version used.
+### Initialize Terraform
+When you initialize terraform it will download the appropriate terraform provider required to interact with your cloud provider, configure the backend to store your state and check your configuration for basic syntax errors.  To initialize terraform run:
   ```
   terraform init
   ```
+
 ### Deploy Infrastructure
 We have defined the infrastructure we want terraform to deploy in `main.tf`.  This file contains a minimal configuration for a GCE VM running the custom OS image that we created with packer.
 * You deploy your infratructure by running terraform apply:
