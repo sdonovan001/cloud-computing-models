@@ -17,7 +17,7 @@
   * If you are prompted to enable any additional APIs respond by entering __y__.
   * When prompted for region, select the region of your choice.
   * If you are prompted to create a repository in the region, respond by enteriing __y__.
-  * If you are prompted to *allow unauthenticated invocations*, respond by entering __n__.
+  * If you are prompted to *allow unauthenticated invocations*, respond by entering __N__.
 
 * Once you have answered all of the prompts a Docker container will be built from the provided source, it will be pushed to the appropriate repository in the selected region and a Cloud Run service will be started to run your charting application.  This can take a minute or two so be patient.
 
