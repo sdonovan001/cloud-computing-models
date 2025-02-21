@@ -5,7 +5,7 @@ This repo explains the differences between the three most common cloud hosting m
 
 <img src="/images/models1.png" alt="On Nooo!" witdh="550" height="550">
 
-The image above illustrates the different application stack responsibilities for each of the hosting models. As you progress from the left to the right (On-site -> SaaS), your responsibilities decrease and the cloud providers responsibilites increase. 
+The image above illustrates the different application stack responsibilities for each of the hosting models. As you progress from the left to the right (On-Prem -> SaaS), your responsibilities decrease and the cloud providers responsibilites increase. 
 
 ## Stock Charting Service
 For each cloud hosting model, we provide an example deployment of a simple charting service. The service is a python based REST application that graphs the last six months of a companies stock price. It also displays a couple of moving averages and technical indicators.  It returns the graph in svg format which can easily be displayed by all major web browsers.  For more details on each hosting model and an example service deployment see the README in their respective directories in the repo:
