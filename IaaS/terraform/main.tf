@@ -1,4 +1,10 @@
+provider "google" {
+  project    = "sdonovan-demo"
+  region     = "us-central1"
+}
+
 resource "google_compute_instance" "default" {
+  provider     = google
   name         = "chart-app"
   machine_type = "e2-medium"
   zone         = "us-central1-a"
