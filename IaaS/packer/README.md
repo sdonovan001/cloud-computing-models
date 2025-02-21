@@ -47,7 +47,7 @@
   ```
     
 ### Download and Build the Packer Builder Image
-Cloud Build provides a community builder docker image that can be used to invoke packer commands via Cloud Build. Before we can use it, we must build it and push it to the Artifact Registry in your GCP project.
+Cloud Build provides a community builder docker image that can be used to invoke packer commands via Cloud Build. Before we can use it, we must build it and push it to the Artifact Registry in our GCP project.
 
 * Clone the [cloud-builders-community](https://github.com/GoogleCloudPlatform/cloud-builders-community) repository.
   ```
