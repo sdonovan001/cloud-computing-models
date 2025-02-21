@@ -7,7 +7,7 @@ With IaaS you are responsible for everything above the virtualization layer.  Th
 
 While IaaS does come with the benefit of shifting CapEx costs to OpEx costs (you don't *own* the physical assets... you *rent* them), you still have many of the same costs you would have with an On-Prem model. With IaaS your datacenter staffing / management costs will be somewhat reduced but your people are still responsible for much of the application stack and therfore the *costs* associated with that.  
 
-A huge benefit of IaaS is the speed at which you can implement chage across your organization. Lets say you recognize an opportunity to leapfrog your competition by significantly scaling the deployment of one of you applications globaly.  In the On-prem model it might take you months to get the required hardware ordered and deployed.  With an IaaS cloud hosting solution... it will only take minutes!
+A huge benefit of IaaS is the speed at which you can implement chage across your organization. Lets say you recognize an opportunity to leapfrog your competition by significantly scaling the deployment of one of your applications globaly.  In the On-prem model it might take you months to get the required hardware ordered and deployed.  With an IaaS cloud hosting solution... it will only take minutes!
 ## Example Deployment using Google Cloud Build, Packer and Terraform
 We will automate our deployment by leveraging [Google Cloud Build](https://cloud.google.com/build?hl=en), [HashiCorp Packer](https://www.packer.io/) and [HashiCorp Terraform](https://www.terraform.io/).  
 * __Google Cloud Build__ - A GCP service that automates the process of building, testing and deploying applications.  
