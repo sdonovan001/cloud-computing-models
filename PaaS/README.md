@@ -3,7 +3,7 @@
 <img src="../images/models3.png" alt="On Nooo!" witdh="550" height="550">
 
 ## Overview
-With PaaS you are responsible for everything above the runtime layer.  The cloud provider is responsible for managing the hardware, virtualization, OS, and application runtimes. With some PaaS solutions, developers still have to worry about application scaling.  With Google's App Engine and Cloud Run PaaS offerings, application scaling is handled by the platform. When using Google's PaaS offerings, developers can focus on their application logic and not worry about any infrastructural concerns. 
+With PaaS you are responsible for everything above the runtime layer.  The cloud provider is responsible for managing the hardware, virtualization, OS, and application runtimes. Some PaaS solutions, like Google's App Engine and Cloud Run, even provide application scaling. When using Google's PaaS offerings, developers can focus on their application logic and not worry about any infrastructural concerns. 
 
 
 
