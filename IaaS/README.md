@@ -18,9 +18,4 @@ We will break our deployment into two distinct steps:
 * We will use Cloud Build and Packer to package our stock charting application into a runnable OS image.  Step by step instructions along with the necessary artifacts can be found in the [packer](./packer) directory.
 * We will use Terraform to stand up a GCE VM running our new OS image (i.e. deploy our application).  Step by step instructions along with the necessary artifacts can be found in the [terraform](./terraform) directory.
 
-
-
-
-
-
 <img align="left" src="../images/warn.png" alt="On Nooo!" witdh="50" height="50"> We have significantly simplified our IaaS deployment. If this were a production application we would need to worry about fault tolerance, disaster recovery and scalability.  These concerns can easily be addressed using widely available cloud computing constructs such as managed instance groups, load balancers and multi-region deployments.
