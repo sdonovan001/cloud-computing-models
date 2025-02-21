@@ -5,7 +5,7 @@
 ## Overview
 With PaaS you are responsible for everything above the runtime layer.  The cloud provider is responsible for managing the hardware, virtualization, OS, and application runtimes. Some PaaS solutions, like Google's App Engine and Cloud Run, even provide application scaling. When using Google's PaaS offerings, developers can focus on their application logic and not worry about any infrastructural concerns. 
 
-
+The cost of running PaaS applications is significantly less expensive than running IaaS based applications because organizations do not have to spend money or headcount on managing the infrastructure itself.
 
 ## Example Cloud Run Deployment using Google Cloud SDK
 
