@@ -55,7 +55,7 @@ We have defined the infrastructure we want terraform to deploy in `main.tf`.  Th
   ```
 * Before making any changes to our cloud infrastructure, terraform provides us with details on exactly what it is about to do.  Validate that the actions terraform is about to perform on your behalf are what you intend, before answering 'yes' to the prompt.  In our case answering 'yes' to the prompt will result in a GCE VM running our custom OS image we created being stood up which is exactly what we want... so answer __yes__ to the prompt.
 
-### Test our Deployment
+### Test Deployment
 * Get the __public-ip-address__ for the stock symbol charting application you just deployed:
   ```
   terraform show | grep nat_ip | awk '{print $3 }'
