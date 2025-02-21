@@ -97,3 +97,4 @@ Terraform can not only be used to deploy infrastructure but it can also be used 
 * Verify the changes terraform is about to make on your behalf.  In this case it will destroy (or delete) the GCE VM that we stood up with the apply.  This is exactly what we expect so answer __yes__ to the prompt.
 ---
 ### Terraform Details (What's Happening Behind the Curtain)
+<img src="../../images/terraform.png" alt="On Nooo!" witdh="550" height="550">
