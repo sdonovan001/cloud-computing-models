@@ -12,7 +12,7 @@ A huge benefit of IaaS is the speed at which you can implement chage across your
 We will automate our deployment by leveraging [Google Cloud Build](https://cloud.google.com/build?hl=en), [HashiCorp Packer](https://www.packer.io/) and [HashiCorp Terraform](https://www.terraform.io/).  
 * __Google Cloud Build__ - A GCP service that automates the process of building, testing and deploying applications.  
 * __HashiCorp Packer__ - An open-source tool that automates the creation of machine images across multiple platforms.
-* __HashiCorp Terraform__ - An open-source tool that lets you deploy and manage infrastructure as Code (IaC).
+* __HashiCorp Terraform__ - An open-source tool that enables you to deploy and manage infrastructure as Code (IaC).
 
 We will break our deployment into two distinct steps: 
 * We will use Cloud Build and Packer to package our stock charting application into a runnable OS image.  Step by step instructions along with the necessary artifacts can be found in the [packer](./packer) directory.
