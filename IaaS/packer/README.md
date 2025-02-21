@@ -60,10 +60,10 @@ Cloud Build provides a community builder docker image that can be used to invoke
   ```
   
 ### Configuring Packer Build Variables
-* Edit the *variables.pkvars.hcl* in this directory and set the following variables appropriately:
-  * `project_id` - your project identifier
-  * `zone` - GCP Compute Engine zone for temporary instance
-  * `builder_sa` - Build Service Account in the format $(PROJECT_NUMBER)-compute@developer.gserviceaccount.com
+* Edit the __variables.pkvars.hcl__ in this directory and set the following variables appropriately:
+  * __project_id__ - your project identifier
+  * __zone__ - GCP Compute Engine zone for temporary instance
+  * __builder_sa__ - Build Service Account in the format $(PROJECT_NUMBER)-compute@developer.gserviceaccount.com
  
 ### Submit Cloud Build
 * Submit our packer image build to Google Cloud Build:
