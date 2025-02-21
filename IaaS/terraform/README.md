@@ -22,7 +22,7 @@ When you initialize terraform it will download the appropriate terraform provide
 
 ### Deploy Infrastructure
 We have defined the infrastructure we want terraform to deploy in `main.tf`.  This file contains a minimal configuration for a GCE VM running the custom OS image that we created with packer.
-* You deploy your infratructure by running terraform apply:
+* We deploy our infratructure by running terraform apply:
   ```
   terraform apply
   
