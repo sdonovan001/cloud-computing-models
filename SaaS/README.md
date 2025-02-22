@@ -6,4 +6,4 @@ With SaaS the entire application stack is supported and managed by the provider,
 
 While there is sometimes *sticker shock* associated with the cost of SaaS solutions, when you consider that you do not have to build the application, are not paying for hardware and don't have to support anything, SaaS solutions are typically the least expensive of the three cloud computing models in the long run.
 ## Example Deployment using...
-Well... um... just click [here](https://www.google.com/finance/quote/GOOG:NASDAQ?hl=en&window=6).
+Well... um... just click [here](https://www.google.com/finance/quote/GOOG:NASDAQ?hl=en&window=6M).
