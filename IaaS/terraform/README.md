@@ -12,7 +12,7 @@
   ```
   
 ### Terraform State
-Terraform must persist state to manager your infrastructure.  It uses `backends` to persist state.  The default backend is a local backend which stores state on the local filesystem, locks that state using system APIs, and performs operations locally.  While using a local backend is not suitable for managing large scale production environments, it is perfectly fine for small scale demos.  We will rely on the default local backend for our example deployment.
+Terraform must persist state to manager your infrastructure.  It uses __backends__ to persist state.  The default backend is a local backend which stores state on the local filesystem, locks that state using system APIs, and performs operations locally.  While using a local backend is not suitable for managing large scale production environments, it is perfectly fine for small scale demos.  We will rely on the default local backend for our example deployment.
 
 ### Initialize Terraform
 When you initialize terraform it will download the appropriate terraform provider required to interact with your cloud provider, configure the backend to store your state and check your configuration for basic syntax errors.  To initialize terraform run:
