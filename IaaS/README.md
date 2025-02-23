@@ -3,12 +3,26 @@
 <img src="../images/models2.png" alt="On Nooo!" witdh="550" height="550">
 
 ## Overview
-With IaaS you are responsible for everything above the virtualization layer.  Think of it as "Virtualization-as-a-Service".  This is the most flexible of the three cloud computing models since you control everything above the virtualization layer.  Your staff is not only responsible for designing, building and supporting the application but they are also responsible for building OS images, standing up and configuring VMs, identifying and managing your storage needs and properly configuring your network resources.  Essentially they have all of the same responsibilities they have with an On-Prem solution with the exception of the procurment / deployment / support of the physical assets.
+IaaS is a cloud computing model where on-demand infrastructure resources, such as compute, storage, networking and virtualization, are provided to organizations over the internet. These services are typically offerend in a pay-as-you-go manner where your usage is metered and you receive a monthly bill. IaaS frees organizations from the cost and complexity of buying and managing infrastructure resources and managing data centers.
 
-While IaaS does come with the benefit of shifting CapEx costs to OpEx costs (you don't *own* the physical assets... you *rent* them), you still have many of the same costs you would have with an On-Prem model. With IaaS your datacenter staffing / management costs will be somewhat reduced but your people are still responsible for much of the application stack and therfore the *costs* associated with that.  
+### Responsibilities
+With IaaS, the cloud provider is responsible for the hardware and virtualization layers of the application stack.  They have to purchase and maintain bare metal servers, network gear, storage and provide a virtualization solution.  They are also responsible for the data center power, cooling and security.  The customer is responsible for everything above the virtualization layer of the application stack: OS, runtime, scaling, application and data.
 
-A huge benefit of IaaS is the speed at which you can implement chage across your organization. Lets say you recognize an opportunity to leapfrog your competition by significantly scaling the deployment of one of your applications globaly.  With the On-prem model it might take you months to get the required hardware ordered and deployed.  With an IaaS cloud hosting solution... it will only take minutes!
-## Example Deployment using Google Cloud Build, Packer and Terraform
+### Flexibility
+IaaS is the most flexible of the three common cloud computing models. Customers have complete control above the virtualization layer.  They not only control the size of their VM wrt CPU and memory, they also can pick between different underlying processor types. They can even decide if there should be accelerators (GPUs / TPUs) housed in their VMs.  
+
+Not only is IaaS the most flexible cloud computing model, it also provides an added dimension of flexibility over on-prem based solutions.  If you need to scale your applications because of some business need, you don't need to purchase more hardware, wait for it to be delivered and physically deploy it.  With IaaS... worst case... you need only run a script to scale your applications... best case... you do nothing because you already planed for it leveraging common IaaS scaling techniques. 
+
+### Operational Load
+Since customers are still responsible for the bulk of the application stack with IaaS, they will have a greater operational load with IaaS than with PaaS or SaaS solutions.  They are responsible for patching OSs, securing VM access, upgrading application runtimes, scaling application and providinig fault tolerance and DR.  IaaS does have a lower operational load than On-Prem based solutions since customers don't have to manage the physical assets or data centers.
+
+### Staffing / Skills
+With IaaS, the customer is still responsible for most of the application stack so there is not a significant drop in staffing levels or the skills required of the staff.  The staffing levels for your data center engineers will be reduced but when you also take into consideration that your infrastructure engineers will need to learn how to manage cloud resources via your providers APIs, there isn't a significant change in this dimension when moving from On-Prem to IaaS solutions.
+
+### Total Cost of Ownership (TCO)
+IaaS reduces your upfront capital expenditures. Since billing is based on a pay-as-you-go model, you only have to pay for compute, storage and networking resources that you consume.  Cloud provider billiing systems make it fairly easy to monitor, predict and contain costs.  When you take into consideration operational load and staffing, IaaS is typically the most expensive of the three common cloud computing models. 
+
+## Example IaaS Deployment using Google Cloud Build, Packer and Terraform
 We will automate our deployment by leveraging [Google Cloud Build](https://cloud.google.com/build?hl=en), [HashiCorp Packer](https://www.packer.io/) and [HashiCorp Terraform](https://www.terraform.io/).  
 * __Google Cloud Build__ - A GCP service that automates the process of building, testing and deploying applications.  
 * __HashiCorp Packer__ - An open-source tool that automates the creation of machine images across multiple platforms.
