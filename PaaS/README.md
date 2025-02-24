@@ -3,7 +3,7 @@
 <img src="../images/models3.png" alt="On Nooo!" witdh="550" height="550">
 
 ## Overview
-PaaS is a cloud computing model that provides all the infrastructure and application frameworks needed to build and deploy cloud computing applications. Developers and operations teams can use PaaS solutions to be freed from managing infrastructure and application frameworks.  This enables them to focus on the *value adding* function of application development and frees them from performing the commoditized functions of infrastructure management and platform support. 
+PaaS is a cloud computing model that provides the infrastructure and application framework needed to build and deploy cloud computing applications. Developers and operations teams can use PaaS solutions to be freed from managing infrastructure and application frameworks.  This enables them to focus on the *value adding* function of application development and frees them from performing the commoditized functions of infrastructure management and platform support. 
 
 ### Responsibility
 With PaaS, the cloud provider is responsible for the OS and runtime layers of the application stack along with all of the IaaS layers.  The customer is typically responsible for everything above the runtime layer of the application stack: scaling, application and data.  Some vendors PaaS solutions will even handle application scaling for customers.  Googles App Engine and Cloud Run PaaS offerings are examples of this.
