@@ -20,7 +20,7 @@ Customers who leverage PaaS solutions spend less time deploying cloud infrastruc
 ### Total Cost Of Ownership (TCO)
 From a cloud billing perspective, PaaS solutions are often more expensive per unit of resource than IaaS solution.  This is due to the added costs of the cloud provider managing more layers of the application stack.  However, when you look at it from a TCO perspective, PaaS solutions are less expensive in the long run because of the decrease in costs caused by the decrease in operation load and staffing / skills.
 
-## Example Cloud Run Deployment using Google Cloud SDK
+## Example PaaS Deployment using Google Cloud SDK and Cloud Run
 
 ### Prerequsites
 * Install [Google Cloud CLI](https://cloud.google.com/sdk?hl=en).
