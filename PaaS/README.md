@@ -12,10 +12,10 @@ With PaaS, the cloud provider is responsible for the OS and runtime layers of th
 When building your applications on PaaS solutions, you will find yourself more constrained than when using IaaS solutions. Since you don't manage the underlying infrastructure or frameworks, your ability to adapt them is restricted to only the features your cloud provider built into the platform itself. For example, a providers platform my not support the latest version of a specific programming language.  That said, a mature PaaS solution is typically flexible enough to provide significant value.
 
 ### Operational Load
-PaaS solutions require significantly less time to manage and support than IaaS solutions.  Most of the technical complexity of managing the infrastructure and the application platform is the cloud providers responsibility.  Your engineers need only concern themselves with support and maintenance of the applications themselves.
+PaaS solutions require significantly less time to manage and support than IaaS solutions.  Most of the technical complexity of managing and supporting the infrastructure and the application platform is the cloud providers responsibility.  Your engineers need only concern themselves with managing and supporting the applications themselves.
 
 ### Staffing / Skills
-Customers who leverage PaaS solutions spend less time deploying cloud infrastructue and managing application frameworks, therefore their engineers no longer need to be experts in those areas.  This enables their engineers to focus more on revenue generating activities like application features that empower their business to move faster and be more productive.
+Customers who leverage PaaS solutions spend less time deploying cloud infrastructue and managing application frameworks, therefore their engineers no longer need to be experts in those areas or perform those tasks.  This enables their engineers to focus more on revenue generating activities like application features that empower their business to move faster and be more productive.
 
 ### Total Cost Of Ownership (TCO)
 From a cloud billing perspective, PaaS solutions are often more expensive per unit of resource than IaaS solution.  This is due to the added costs of the cloud provider managing more layers of the application stack.  However, when you look at it from a TCO perspective, PaaS solutions are less expensive in the long run because of the decrease in costs caused by the decrease in operation load and staffing / skills.
