@@ -2,7 +2,7 @@
 <img src="../images/models4.png" alt="On Nooo!" witdh="550" height="550">
 
 ## Overview
-SaaS is a cloud computing model where the entire application stack is managed and supported by the provider, unlike the other models where the customer has some responsibilities. Typically SaaS applications are accessed through a web browser, requiring little or no local software installation.  Examples of SaaS solutions are gmail or Google Workspaces.
+SaaS is a cloud computing model where the entire application stack is managed and supported by the provider, unlike the other models where the customer has some application stack responsibilities. Typically SaaS applications are accessed through a web browser, requiring little or no local software installation.  Examples of SaaS solutions are gmail or Google Workspaces.
 
 ### Responsibilities
 With SaaS the cloud provider is responsible for the entire application stack from the physical hardware up to the application code.  The only responsibility the customer has is managing the data or configuration of the system.
