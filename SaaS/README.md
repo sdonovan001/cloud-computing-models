@@ -8,7 +8,7 @@ SaaS is a cloud computing model where the entire application stack is managed an
 With SaaS the cloud provider is responsible for the entire application stack from the physical hardware up to the application code.  The only responsibility the customer has is managing the data or configuration of the system.
 
 ### Flexibility
-The SaaS model is the least flexible of all the cloud computing models.  You are forced to use the application *as-is*. Your only ability to modify the applications functionality is through leveraging the configuration features the service provider had the foresight to encorporate into the application.
+The SaaS model is the least flexible of all the cloud computing models.  You are forced to use the application *as-is*. Your only ability to modify the applications functionality is through leveraging the configuration features the service provider had the foresight to incorporate into the application.
 
 ### Operational Load
 Since the SaaS provider delivers the entire application over the internet, the only management responsibilities the customers have are maintaining the data and configurations.  Management of the infrastructure, OS, runtime and application code is performed by the SaaS provider.  You will, however, need to provide feedback to the provider in the form of bug reports and feature requests.
