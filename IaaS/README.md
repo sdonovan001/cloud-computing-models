@@ -3,7 +3,7 @@
 <img src="../images/models2.png" alt="On Nooo!" witdh="550" height="550">
 
 ## Overview
-IaaS is a cloud computing model where on-demand infrastructure resources, such as compute, storage, networking and virtualization, are provided to organizations over the internet. These services are typically offerend in a pay-as-you-go manner where your usage is metered and you receive a monthly bill. IaaS frees organizations from the cost and complexity of buying and managing infrastructure resources and managing data centers.
+IaaS is a cloud computing model where on-demand infrastructure resources, such as compute, storage, networking and virtualization, are provided to organizations over the internet. These services are typically offerend in a pay-as-you-go manner where your usage is metered and you receive a monthly bill. IaaS frees organizations from the cost and complexity of buying and managing infrastructure resources.
 
 ### Responsibilities
 With IaaS, the cloud provider is responsible for the hardware and virtualization layers of the application stack.  They have to purchase and maintain bare metal servers, network gear, storage and provide a virtualization solution.  They are also responsible for the data center power, cooling and security.  The customer is responsible for everything above the virtualization layer of the application stack: OS, runtime, scaling, application and data.
